@@ -24,7 +24,7 @@ function App() {
     try {
       const response = await axios.post('http://localhost:3000/ai/get', { prompt: code });
       // console.log("Response from server:", response.data);
-      setReview(response.data);
+      setReview(response.data.response);
     } catch (error) {
       console.error("Error during code review:", error);
       alert("Failed to review code. Check console for details.");
