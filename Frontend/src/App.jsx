@@ -22,7 +22,7 @@ function App() {
     setLoading(true);
     setReview('');
     try {
-      const response = await axios.post('http://localhost:3000/ai/get', { prompt: code });
+      const response = await axios.post("https://code-reviewer-mza8.onrender.com/ai/get", { prompt: code });
       // console.log("Response from server:", response.data);
       setReview(response.data.response);
     } catch (error) {
